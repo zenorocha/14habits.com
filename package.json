@@ -1,0 +1,22 @@
+{
+  "name": "14habits.com",
+  "author": "Zeno Rocha",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "sitemap": "node sitemap.js",
+    "deploy": "now --prod"
+  },
+  "dependencies": {
+    "@tailwindcss/ui": "^0.3.0",
+    "autoprefixer": "^9.8.0",
+    "i18n-js": "^3.5.1",
+    "next": "^9.4.1",
+    "postcss-import": "^12.0.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "tailwindcss": "^1.4.6"
+  }
+}
