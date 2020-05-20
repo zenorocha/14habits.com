@@ -26,11 +26,10 @@ class Index extends React.Component {
             <p className="text-base font-medium text-gray-900">
               {i18n.t('notifyCta')}
             </p>
-            <form action="#" method="POST" className="mt-3 sm:flex">
-              <input aria-label="Email" className="appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1" placeholder={i18n.t('enterEmail')} />
-              <button type="submit" className="mt-3 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus:outline-none focus:shadow-outline active:bg-indigo-900 transition duration-150 ease-in-out sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
-                {i18n.t('notifyMe')}
-              </button>
+
+            <form action="https://14habits.us18.list-manage.com/subscribe/post?u=9c6a6470e21773febbf140222&amp;id=1ca77ddfde" method="POST" className="mt-3 sm:flex">
+              <input name="EMAIL" type="email" placeholder={i18n.t('enterEmail')} id="mce-EMAIL" required aria-label="Email" className="appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1" />
+              <input name="subscribe" type="submit" value={i18n.t('notifyMe')} id="mc-embedded-subscribe" className="mt-3 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus:outline-none focus:shadow-outline active:bg-indigo-900 transition duration-150 ease-in-out sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto" />
             </form>
           </div>
         </div>
