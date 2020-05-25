@@ -13,9 +13,11 @@ export default class extends Document {
     return (
       <html lang="en">
         <Head>
-          <meta charSet="utf-8" />
+          <meta content="Zeno Rocha" name="author" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
           <link rel="icon" type="image/x-icon" href="/static/img/favicon.ico" />
+          <meta property="og:type" content="website" />
+          <meta content="summary" name="twitter:card" />
 
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 
