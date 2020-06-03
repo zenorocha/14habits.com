@@ -13,6 +13,15 @@ class Interviews extends React.Component {
         linkedin: 'lais-andrade-55981930',
       },
       {
+        id: 'fabio',
+        name: 'Fabio Costa',
+        company: 'GoDaddy',
+        companyUrl: 'https://godaddy.com',
+        github: 'fabiomcosta',
+        twitter: 'fabiomiranda',
+        linkedin: 'fabiomirandacosta',
+      },
+      {
         id: 'tadashi',
         name: 'Fernando Tadashi',
         company: 'Adobe',
