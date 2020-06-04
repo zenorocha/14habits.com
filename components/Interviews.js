@@ -13,15 +13,6 @@ class Interviews extends React.Component {
         linkedin: 'lais-andrade-55981930',
       },
       {
-        id: 'luciano',
-        name: 'Luciano Sousa',
-        company: 'Shopify',
-        companyUrl: 'https://www.shopify.com',
-        github: 'lucianosousa',
-        twitter: 'lucianosousa',
-        linkedin: 'lucianosousa',
-      },
-      {
         id: 'fabio',
         name: 'Fabio Costa',
         company: 'GoDaddy',
@@ -37,6 +28,15 @@ class Interviews extends React.Component {
         companyUrl: 'https://adobe.com',
         github: 'ftadashi',
         linkedin: 'ftadashi',
+      },
+      {
+        id: 'luciano',
+        name: 'Luciano Sousa',
+        company: 'Shopify',
+        companyUrl: 'https://www.shopify.com',
+        github: 'lucianosousa',
+        twitter: 'lucianosousa',
+        linkedin: 'lucianosousa',
       },
       {
         id: 'manu',
@@ -58,7 +58,8 @@ class Interviews extends React.Component {
         <p className="text-xl text-indigo-700 hover:text-indigo-500">
           <a href={interviewee.companyUrl} target="_blank">{interviewee.company}</a>
         </p>
-        <p className="text-base text-gray-600">{i18n.t(`interviews.${interviewee.id}.bio`)}</p>
+        <p className="text-base text-gray-600 mb-1">{i18n.t(`interviews.${interviewee.id}.bio`)}</p>
+        <p className="text-sm italic text-gray-500">{i18n.t(`interviews.${interviewee.id}.location`)}</p>
         <div className="flex flex-row my-2">
           {interviewee.github &&
             <a href={`https://github.com/${interviewee.github}`} target="_blank">
