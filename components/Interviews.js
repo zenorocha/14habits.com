@@ -13,6 +13,15 @@ class Interviews extends React.Component {
         linkedin: 'lais-andrade-55981930',
       },
       {
+        id: 'luciano',
+        name: 'Luciano Sousa',
+        company: 'Shopify',
+        companyUrl: 'https://www.shopify.com',
+        github: 'lucianosousa',
+        twitter: 'lucianosousa',
+        linkedin: 'lucianosousa',
+      },
+      {
         id: 'fabio',
         name: 'Fabio Costa',
         company: 'GoDaddy',
@@ -74,8 +83,8 @@ class Interviews extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
-    return <div className="bg-gray-50">
-      <div className="max-w-screen-xl mx-auto pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:pt-20 lg:pb-28 lg:px-8">
+    return <div className="bg-white">
+      <div className="max-w-screen-xl mx-auto pt-16 pb-4 px-4">
         <h2 className="text-3xl leading-9 font-extrabold text-gray-900">
           {i18n.t('interviews.title')}
         </h2>
