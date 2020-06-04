@@ -63,17 +63,17 @@ class Interviews extends React.Component {
         <div className="flex flex-row my-2">
           {interviewee.github &&
             <a href={`https://github.com/${interviewee.github}`} target="_blank">
-              <img className="w-5 h-5 mr-2" src={`/static/img/logo-github.svg`} alt="GitHub" />
+              <img className="w-5 h-5 mr-2" src="/static/img/logo-github.svg" alt="GitHub" />
             </a>
           }
           {interviewee.twitter &&
             <a href={`https://twitter.com/${interviewee.twitter}`} target="_blank">
-              <img className="w-5 h-5 mr-2" src={`/static/img/logo-twitter.svg`} alt="Twitter" />
+              <img className="w-5 h-5 mr-2" src="/static/img/logo-twitter.svg" alt="Twitter" />
             </a>
           }
           {interviewee.linkedin &&
             <a href={`https://linkedin.com/in/${interviewee.linkedin}`} target="_blank">
-              <img className="w-5 h-5 mr-2" src={`/static/img/logo-linkedin.svg`} alt="Linkedin" />
+              <img className="w-5 h-5 mr-2" src="/static/img/logo-linkedin.svg" alt="Linkedin" />
             </a>
           }
         </div>
