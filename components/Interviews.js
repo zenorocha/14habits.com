@@ -30,15 +30,6 @@ class Interviews extends React.Component {
         linkedin: 'ftadashi',
       },
       {
-        id: 'luciano',
-        name: 'Luciano Sousa',
-        company: 'Shopify',
-        companyUrl: 'https://www.shopify.com',
-        github: 'lucianosousa',
-        twitter: 'lucianosousa',
-        linkedin: 'lucianosousa',
-      },
-      {
         id: 'manu',
         name: 'Manuel de la Peña',
         company: 'Elastic',
@@ -46,6 +37,24 @@ class Interviews extends React.Component {
         github: 'mdelapenya',
         twitter: 'mdelapenya',
         linkedin: 'mdelapenya',
+      },
+      {
+        id: 'caio',
+        name: 'Caio Gondim',
+        company: 'New York Times',
+        companyUrl: 'https://www.nytimes.com',
+        github: 'caiogondim',
+        twitter: 'caio_gondim',
+        linkedin: 'cgondim',
+      },
+      {
+        id: 'luciano',
+        name: 'Luciano Sousa',
+        company: 'Shopify',
+        companyUrl: 'https://www.shopify.com',
+        github: 'lucianosousa',
+        twitter: 'lucianosousa',
+        linkedin: 'lucianosousa',
       },
     ]
   };
