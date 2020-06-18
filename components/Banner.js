@@ -1,14 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
-import i18n from '../lib/i18n';
 
 class Banner extends React.Component {
   state = {
     isVisible: false
   };
 
-  componentDidMount() {
-    if (this.props.geo && this.props.geo.country === 'BR') {
+  async componentDidMount() {
+    const geoFetch = await fetch('/api/geo');
+    const { geo } = await geoFetch.json();
+
+    if (geo && geo.country === 'BR') {
       this.setState({ isVisible: true });
     }
   }
@@ -18,8 +20,6 @@ class Banner extends React.Component {
   }
 
   render() {
-    i18n.locale = this.props.locale;
-
     return <div className={this.state.isVisible ? 'block' : 'hidden'}>
       <div className="bg-indigo-600">
         <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
