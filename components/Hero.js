@@ -5,7 +5,7 @@ class Hero extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
-    return <div className="mx-auto max-w-screen-xl px-4 my-8 sm:my-12 sm:px-6 md:my-20 xl:my-24">
+    return <div className="mx-auto max-w-screen-xl px-4 mt-7 mb-8 sm:mt-11 sm:mb-12 sm:px-6 md:mt-19 md:mb-20 xl:mt-23 xl:mb-24">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="md:max-w-1xl md:mx-auto lg:col-span-8">
           <div className="text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">

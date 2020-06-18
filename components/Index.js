@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import i18n from '../lib/i18n';
+import Banner from './Banner';
 import Hero from './Hero';
 import Author from './Author';
 import Interviews from './Interviews';
@@ -24,6 +25,7 @@ class Index extends React.Component {
 
     return <div>
       {this.renderHead()}
+      <Banner geo={this.props.geo} />
       <Hero locale={this.props.locale} />
       <Faq locale={this.props.locale} />
       <Author locale={this.props.locale} />

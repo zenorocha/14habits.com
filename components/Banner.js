@@ -6,11 +6,14 @@ class Banner extends React.Component {
     isVisible: false
   };
 
-  async componentDidMount() {
-    const geoFetch = await fetch('/api/geo');
-    const { geo } = await geoFetch.json();
+  componentDidUpdate(prevProps) {
+    if (this.props.geo !== prevProps.geo) {
+      this.checkCountry();
+    }
+  }
 
-    if (geo && geo.country === 'BR') {
+  checkCountry() {
+    if (this.props.geo && this.props.geo.country === 'BR') {
       this.setState({ isVisible: true });
     }
   }
@@ -20,7 +23,7 @@ class Banner extends React.Component {
   }
 
   render() {
-    return <div className={this.state.isVisible ? 'block' : 'hidden'}>
+    return <div className={this.state.isVisible ? 'visible' : 'invisible'}>
       <div className="bg-indigo-600">
         <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between flex-wrap">

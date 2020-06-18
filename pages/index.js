@@ -1,13 +1,19 @@
 import React from 'react';
 import Index from '../components/Index';
-import Banner from '../components/Banner';
 
 class IndexEnglish extends React.Component {
+  state = {
+  	geo: {}
+  };
+
+  async componentDidMount() {
+    const geoFetch = await fetch('/api/geo');
+    const { geo } = await geoFetch.json();
+    this.setState({ geo });
+  }
+
   render() {
-  	return <div>
-    	<Banner />
-    	<Index locale="en-US" />
-  	</div>
+  	return <Index locale="en-US" geo={this.state.geo} />
   }
 }
 
