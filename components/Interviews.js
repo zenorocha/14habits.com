@@ -56,6 +56,15 @@ class Interviews extends React.Component {
         twitter: 'lucianosousa',
         linkedin: 'lucianosousa',
       },
+      {
+        id: 'netto',
+        name: 'Netto Farah',
+        company: 'Segment',
+        companyUrl: 'https://segment.com',
+        github: 'nettofarah',
+        twitter: 'nettofarah',
+        linkedin: 'netto-farah-7433b328',
+      },
     ]
   };
 
