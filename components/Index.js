@@ -6,6 +6,7 @@ import Hero from './Hero';
 import Author from './Author';
 import Interviews from './Interviews';
 import Faq from './Faq';
+import Pricing from './Pricing';
 import Footer from './Footer';
 
 class Index extends React.Component {
@@ -30,6 +31,7 @@ class Index extends React.Component {
       <Faq locale={this.props.locale} />
       <Author locale={this.props.locale} />
       <Interviews locale={this.props.locale} />
+      <Pricing locale={this.props.locale} geo={this.props.geo} />
       <Footer locale={this.props.locale} />
     </div>
   }
