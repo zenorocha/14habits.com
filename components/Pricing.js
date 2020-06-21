@@ -3,8 +3,7 @@ import i18n from '../lib/i18n';
 
 class Pricing extends React.Component {
   state = {
-    price: '$9',
-    link: 'https://www.amazon.com/dp/B08BF74RRG'
+    price: '$9'
   };
 
   componentDidUpdate(prevProps) {
@@ -16,8 +15,7 @@ class Pricing extends React.Component {
   checkCountry() {
     if (this.props.geo && this.props.geo.country === 'BR') {
       this.setState({
-        value: 'R$24',
-        link: 'https://www.amazon.com.br/dp/B08BF7PZZX'
+        price: 'R$24'
       });
     }
   }
@@ -108,7 +106,7 @@ class Pricing extends React.Component {
                       </ul>
                       <div className="mt-10">
                         <div className="rounded-lg shadow-md">
-                          <a href={this.state.link} className="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150" aria-describedby="tier-growth">
+                          <a href={i18n.t('pricing.link')} className="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150">
                             {i18n.t('pricing.cta')}
                           </a>
                         </div>

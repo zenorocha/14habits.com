@@ -10,6 +10,16 @@ import Pricing from './Pricing';
 import Footer from './Footer';
 
 class Index extends React.Component {
+  state = {
+    geo: {}
+  };
+
+  async componentDidMount() {
+    const geoFetch = await fetch('/api/geo');
+    const { geo } = await geoFetch.json();
+    this.setState({ geo });
+  }
+
   renderHead() {
     return <Head>
       <title>{i18n.t('title')}</title>
@@ -26,12 +36,12 @@ class Index extends React.Component {
 
     return <div>
       {this.renderHead()}
-      <Banner geo={this.props.geo} />
+      <Banner locale={this.props.locale} geo={this.state.geo} />
       <Hero locale={this.props.locale} />
       <Faq locale={this.props.locale} />
       <Author locale={this.props.locale} />
       <Interviews locale={this.props.locale} />
-      <Pricing locale={this.props.locale} geo={this.props.geo} />
+      <Pricing locale={this.props.locale} geo={this.state.geo} />
       <Footer locale={this.props.locale} />
     </div>
   }
