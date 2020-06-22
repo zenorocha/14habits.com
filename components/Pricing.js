@@ -5,6 +5,7 @@ class Pricing extends React.Component {
   state = {
     price: '$9',
     cents: '.99',
+    baseUrl: 'https://www.amazon.com/dp/',
   };
 
   componentDidUpdate(prevProps) {
@@ -16,28 +17,38 @@ class Pricing extends React.Component {
   checkCountry() {
     if (!this.props.geo) return;
 
-    console.log(this.props.geo.country);
-
     if (this.props.geo.country === 'BR') {
-      this.setState({ price: 'R$24', cents: '.99' });
+      this.setState({ price: 'R$24', cents: '.99', baseUrl: 'https://www.amazon.com.br/dp/', });
     }
     else if (this.props.geo.country === 'IN') {
-      this.setState({ price: '₹449' });
+      this.setState({ price: '₹449', cents: null, baseUrl: 'https://www.amazon.in/dp/', });
     }
-    else if (this.props.geo.country === 'UK') {
-      this.setState({ price: '£7', cents: '.95' });
+    else if (this.props.geo.country === 'GB') {
+      this.setState({ price: '£7', cents: '.95', baseUrl: 'https://www.amazon.co.uk/dp/', });
     }
-    else if (this.props.geo.country === 'DE' || this.props.geo.country === 'FR' || this.props.geo.country === 'ES' || this.props.geo.country === 'IT' || this.props.geo.country === 'NL') {
-      this.setState({ price: '€8', cents: '.87' });
+    else if (this.props.geo.country === 'DE') {
+      this.setState({ price: '€8', cents: '.87', baseUrl: 'https://www.amazon.de/dp/', });
+    }
+    else if (this.props.geo.country === 'FR') {
+      this.setState({ price: '€8', cents: '.87', baseUrl: 'https://www.amazon.fr/dp/', });
+    }
+    else if (this.props.geo.country === 'ES') {
+      this.setState({ price: '€8', cents: '.87', baseUrl: 'https://www.amazon.es/dp/', });
+    }
+    else if (this.props.geo.country === 'IT') {
+      this.setState({ price: '€8', cents: '.87', baseUrl: 'https://www.amazon.it/dp/', });
+    }
+    else if (this.props.geo.country === 'NL') {
+      this.setState({ price: '€8', cents: '.87', baseUrl: 'https://www.amazon.nl/dp/', });
     }
     else if (this.props.geo.country === 'JP') {
-      this.setState({ price: '¥1072' });
+      this.setState({ price: '¥1072', cents: null, baseUrl: 'https://www.amazon.co.jp/dp/', });
     }
     else if (this.props.geo.country === 'MX') {
-      this.setState({ price: '$149', cents: '.99' });
+      this.setState({ price: '$149', cents: '.99', baseUrl: 'https://www.amazon.com.mx/dp/', });
     }
     else if (this.props.geo.country === 'AU') {
-      this.setState({ price: '$11', cents: '.99' });
+      this.setState({ price: '$11', cents: '.99', baseUrl: 'https://www.amazon.com.au/dp/', });
     }
   }
 
@@ -129,7 +140,7 @@ class Pricing extends React.Component {
                       </ul>
                       <div className="mt-10">
                         <div className="rounded-lg shadow-md">
-                          <a href={i18n.t('pricing.link')} className="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150">
+                          <a href={`${this.state.baseUrl}${i18n.t('pricing.amazonId')}`} className="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150">
                             {i18n.t('pricing.cta')}
                           </a>
                         </div>
