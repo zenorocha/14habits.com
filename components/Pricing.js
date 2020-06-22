@@ -3,7 +3,8 @@ import i18n from '../lib/i18n';
 
 class Pricing extends React.Component {
   state = {
-    price: '$9'
+    price: '$9',
+    cents: '.99',
   };
 
   componentDidUpdate(prevProps) {
@@ -13,10 +14,30 @@ class Pricing extends React.Component {
   }
 
   checkCountry() {
-    if (this.props.geo && this.props.geo.country === 'BR') {
-      this.setState({
-        price: 'R$24'
-      });
+    if (!this.props.geo) return;
+
+    console.log(this.props.geo.country);
+
+    if (this.props.geo.country === 'BR') {
+      this.setState({ price: 'R$24', cents: '.99' });
+    }
+    else if (this.props.geo.country === 'IN') {
+      this.setState({ price: '₹449' });
+    }
+    else if (this.props.geo.country === 'UK') {
+      this.setState({ price: '£7', cents: '.95' });
+    }
+    else if (this.props.geo.country === 'DE' || this.props.geo.country === 'FR' || this.props.geo.country === 'ES' || this.props.geo.country === 'IT' || this.props.geo.country === 'NL') {
+      this.setState({ price: '€8', cents: '.87' });
+    }
+    else if (this.props.geo.country === 'JP') {
+      this.setState({ price: '¥1072' });
+    }
+    else if (this.props.geo.country === 'MX') {
+      this.setState({ price: '$149', cents: '.99' });
+    }
+    else if (this.props.geo.country === 'AU') {
+      this.setState({ price: '$11', cents: '.99' });
     }
   }
 
@@ -54,9 +75,11 @@ class Pricing extends React.Component {
                         <div className="mt-4 flex items-center justify-center">
                           <div className="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
                             {this.state.price}
-                            <span className="text-2xl leading-8 font-medium text-gray-500">
-                              .99
-                            </span>
+                            {this.state.cents &&
+                              <span className="text-2xl leading-8 font-medium text-gray-500">
+                                {this.state.cents}
+                              </span>
+                            }
                           </div>
                         </div>
                       </div>

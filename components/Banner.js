@@ -13,7 +13,7 @@ class Banner extends React.Component {
   }
 
   checkCountry() {
-    if (this.props.locale !== 'BR' && this.props.geo && this.props.geo.country === 'BR') {
+    if (this.props.locale !== 'pt-BR' && this.props.geo && this.props.geo.country === 'BR') {
       this.setState({ isVisible: true });
     }
   }
