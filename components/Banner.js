@@ -28,7 +28,7 @@ class Banner extends React.Component {
         <div className="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between flex-wrap">
             <div className="w-0 flex-1 flex items-center">
-              <span className="flex p-1 rounded-lg bg-indigo-800">
+              <span className="p-1 rounded-lg bg-indigo-800">
                 <img className="rounded-lg" src="/static/img/flag-br.svg" alt="Brazil Flag" width="36" height="36" />
               </span>
               <p className="ml-3 font-medium text-white truncate">
