@@ -19,7 +19,7 @@ class Faq extends React.Component {
     i18n.locale = this.props.locale;
 
     return <div className="bg-white">
-      <div className="max-w-screen-xl mx-auto pt-12 pb-16 sm:pt-16 sm:pb-20 px-4 sm:px-6 lg:pt-20 lg:pb-28 lg:px-8">
+      <div className="max-w-screen-xl mx-auto px-4 pb-16">
         <h2 className="text-3xl leading-9 font-extrabold text-gray-900">
           {i18n.t(`faqs.title`)}
         </h2>

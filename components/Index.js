@@ -38,10 +38,10 @@ class Index extends React.Component {
       {this.renderHead()}
       <Banner locale={this.props.locale} geo={this.state.geo} />
       <Hero locale={this.props.locale} />
-      <Faq locale={this.props.locale} />
       <Author locale={this.props.locale} />
       <Interviews locale={this.props.locale} />
       <Pricing locale={this.props.locale} geo={this.state.geo} />
+      <Faq locale={this.props.locale} />
       <Footer locale={this.props.locale} />
     </div>
   }
