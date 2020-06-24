@@ -57,6 +57,15 @@ class Interviews extends React.Component {
         linkedin: 'lucianosousa',
       },
       {
+        id: 'michael',
+        name: 'Michael Lancaster',
+        company: 'BlackBerry',
+        companyUrl: 'https://blackberry.com',
+        github: 'weblancaster',
+        twitter: 'weblancaster',
+        linkedin: 'michaellancaster1',
+      },
+      {
         id: 'netto',
         name: 'Netto Farah',
         company: 'Segment',
