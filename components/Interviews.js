@@ -39,6 +39,15 @@ class Interviews extends React.Component {
         linkedin: 'mdelapenya',
       },
       {
+        id: 'loiane',
+        name: 'Loiane Groner',
+        company: 'Citibank',
+        companyUrl: 'https://citibank.com',
+        github: 'loiane',
+        twitter: 'loiane',
+        linkedin: 'loiane',
+      },
+      {
         id: 'caio',
         name: 'Caio Gondim',
         company: 'New York Times',
