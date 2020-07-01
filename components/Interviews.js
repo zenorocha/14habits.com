@@ -84,6 +84,15 @@ class Interviews extends React.Component {
         linkedin: 'michaellancaster1',
       },
       {
+        id: 'silvio',
+        name: 'Silvio Gustavo',
+        company: 'Spotify',
+        companyUrl: 'https://spotify.com',
+        github: 'sgosantos',
+        twitter: 'sgosantos',
+        linkedin: 'sgosantos',
+      },
+      {
         id: 'netto',
         name: 'Netto Farah',
         company: 'Segment',
