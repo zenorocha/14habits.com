@@ -101,6 +101,15 @@ class Interviews extends React.Component {
         twitter: 'nettofarah',
         linkedin: 'netto-farah-7433b328',
       },
+      {
+        id: 'daniel',
+        name: 'Daniel Buchner',
+        company: 'Microsoft',
+        companyUrl: 'https://microsoft.com',
+        github: 'csuwildcat',
+        twitter: 'csuwildcat',
+        linkedin: 'dbuchner',
+      },
     ]
   };
 
