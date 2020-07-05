@@ -8,6 +8,7 @@ import Interviews from './Interviews';
 import Faq from './Faq';
 import Pricing from './Pricing';
 import Footer from './Footer';
+import Alert from './Alert';
 
 class Index extends React.Component {
   state = {
@@ -43,6 +44,7 @@ class Index extends React.Component {
       <Pricing locale={this.props.locale} geo={this.state.geo} />
       <Faq locale={this.props.locale} />
       <Footer locale={this.props.locale} />
+      <Alert locale={this.props.locale} query={this.props.query} />
     </div>
   }
 }
