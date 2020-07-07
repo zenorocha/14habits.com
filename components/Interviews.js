@@ -13,6 +13,14 @@ class Interviews extends React.Component {
         linkedin: 'lais-andrade-55981930',
       },
       {
+        id: 'tadashi',
+        name: 'Fernando Tadashi',
+        company: 'Adobe',
+        companyUrl: 'https://adobe.com',
+        github: 'ftadashi',
+        linkedin: 'ftadashi',
+      },
+      {
         id: 'fabio',
         name: 'Fabio Costa',
         company: 'GoDaddy',
@@ -20,14 +28,6 @@ class Interviews extends React.Component {
         github: 'fabiomcosta',
         twitter: 'fabiomiranda',
         linkedin: 'fabiomirandacosta',
-      },
-      {
-        id: 'tadashi',
-        name: 'Fernando Tadashi',
-        company: 'Adobe',
-        companyUrl: 'https://adobe.com',
-        github: 'ftadashi',
-        linkedin: 'ftadashi',
       },
       {
         id: 'manu',
@@ -64,6 +64,15 @@ class Interviews extends React.Component {
         github: 'lucianosousa',
         twitter: 'lucianosousa',
         linkedin: 'lucianosousa',
+      },
+      {
+        id: 'blake',
+        name: 'Blake Williams',
+        company: 'GitHub',
+        companyUrl: 'https://github.com',
+        github: 'BlakeWilliams',
+        twitter: 'blakeorwhatever',
+        linkedin: 'blake-williams-2694204b',
       },
       {
         id: 'caio',
