@@ -4,6 +4,7 @@ import i18n from '../lib/i18n';
 import Banner from './Banner';
 import Hero from './Hero';
 import Author from './Author';
+import Testimonials from './Testimonials';
 import Interviews from './Interviews';
 import Faq from './Faq';
 import Pricing from './Pricing';
@@ -41,6 +42,7 @@ class Index extends React.Component {
       <Hero locale={this.props.locale} />
       <Author locale={this.props.locale} />
       <Interviews locale={this.props.locale} />
+      <Testimonials locale={this.props.locale} />
       <Pricing locale={this.props.locale} geo={this.state.geo} />
       <Faq locale={this.props.locale} />
       <Footer locale={this.props.locale} />
