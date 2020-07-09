@@ -5,8 +5,17 @@ class Testimonials extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
-    return <section className="py-12 overflow-hidden md:py-20 lg:py-24">
+    return <section className="bg-gray-50 pt-10 pb-12 overflow-hidden md:pt-18 md:pb-20 lg:pt-22 lg:pb-24">
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
+        <svg className="absolute top-full right-full transform translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404" role="img">
+          <defs>
+            <pattern id="ad119f34-7694-4c31-947f-5c9d249b21f3" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+              <rect x="0" y="0" width="4" height="4" className="text-gray-200" fill="currentColor" />
+            </pattern>
+          </defs>
+          <rect width="404" height="404" fill="url(#ad119f34-7694-4c31-947f-5c9d249b21f3)" />
+        </svg>
+
         <div className="relative">
           <img src="/static/img/logo-nike.svg" className="mx-auto" height="100" width="100" />
           <blockquote className="mt-8">
