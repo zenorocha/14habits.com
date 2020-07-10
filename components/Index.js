@@ -5,6 +5,7 @@ import Banner from './Banner';
 import Hero from './Hero';
 import Author from './Author';
 import Testimonials from './Testimonials';
+import Toc from './Toc';
 import Logos from './Logos';
 import Interviews from './Interviews';
 import Faq from './Faq';
@@ -44,6 +45,7 @@ class Index extends React.Component {
       <Author locale={this.props.locale} />
       <Logos locale={this.props.locale} />
       <Interviews locale={this.props.locale} />
+      <Toc locale={this.props.locale} />
       <Testimonials locale={this.props.locale} />
       <Pricing locale={this.props.locale} geo={this.state.geo} />
       <Faq locale={this.props.locale} />
