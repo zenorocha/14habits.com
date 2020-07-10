@@ -5,6 +5,7 @@ import Banner from './Banner';
 import Hero from './Hero';
 import Author from './Author';
 import Testimonials from './Testimonials';
+import Logos from './Logos';
 import Interviews from './Interviews';
 import Faq from './Faq';
 import Pricing from './Pricing';
@@ -41,6 +42,7 @@ class Index extends React.Component {
       <Banner locale={this.props.locale} geo={this.state.geo} />
       <Hero locale={this.props.locale} />
       <Author locale={this.props.locale} />
+      <Logos locale={this.props.locale} />
       <Interviews locale={this.props.locale} />
       <Testimonials locale={this.props.locale} />
       <Pricing locale={this.props.locale} geo={this.state.geo} />
