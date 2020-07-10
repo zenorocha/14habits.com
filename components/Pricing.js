@@ -73,10 +73,10 @@ class Pricing extends React.Component {
               <div className="relative lg:grid lg:grid-cols-9">
                 <div className="mt-10 max-w-lg mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-start-4 lg:col-end-7 lg:row-start-1 lg:row-end-4">
                   <div className="relative z-10 rounded-lg shadow-xl">
-                    <div className="pointer-events-none absolute inset-0 rounded-lg border-2 border-indigo-600"></div>
+                    <div className="pointer-events-none absolute inset-0 rounded-lg border-2 border-purple-600"></div>
                     <div className="absolute inset-x-0 top-0 transform translate-y-px">
                       <div className="flex justify-center transform -translate-y-1/2">
-                        <span className="inline-flex rounded-full bg-indigo-600 px-4 py-1 text-sm leading-5 font-semibold tracking-wider uppercase text-white">
+                        <span className="inline-flex rounded-full bg-purple-600 px-4 py-1 text-sm leading-5 font-semibold tracking-wider uppercase text-white">
                           E-Book
                         </span>
                       </div>
@@ -140,7 +140,7 @@ class Pricing extends React.Component {
                       </ul>
                       <div className="mt-10">
                         <div className="rounded-lg shadow-md">
-                          <a href={`${this.state.baseUrl}${i18n.t('pricing.amazonId')}`} className="block w-full text-center rounded-lg border border-transparent bg-indigo-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo transition ease-in-out duration-150">
+                          <a href={`${this.state.baseUrl}${i18n.t('pricing.amazonId')}`} className="block w-full text-center rounded-lg border border-transparent bg-purple-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-purple-700 active:bg-purple-900 focus:outline-none focus:border-purple-700 focus:shadow-outline-purple transition ease-in-out duration-150">
                             {i18n.t('pricing.cta')}
                           </a>
                         </div>

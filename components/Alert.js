@@ -35,7 +35,7 @@ class Alert extends React.Component {
                 </p>
               </div>
               <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
-                <button onClick={this.hide.bind(this)} type="button" className="-mr-1 flex p-2 rounded-md hover:bg-green-500 focus:outline-none focus:bg-green-500 transition ease-in-out duration-150" aria-label="Dismiss">
+                <button onClick={this.hide.bind(this)} type="button" className="-mr-1 flex p-2 rounded-md hover:bg-green-500 focus:outline-none focus:bg-green-500 transition ease-in-out duration-300" aria-label="Dismiss">
                   <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"/>
                   </svg>

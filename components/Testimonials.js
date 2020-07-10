@@ -25,11 +25,11 @@ class Testimonials extends React.Component {
             <footer className="mt-8">
               <div className="md:flex md:items-center md:justify-center">
                 <div className="md:flex-shrink-0">
-                  <img className="mx-auto h-10 w-10 rounded-full" src="/static/img/avatar-zachary.jpeg" alt="Zachary Sohovich" />
+                  <img className="mx-auto h-12 w-12 rounded-full" src="/static/img/avatar-zachary.jpeg" alt="Zachary Sohovich" />
                 </div>
                 <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
                   <div className="text-base leading-6 font-medium text-gray-900">Zachary Sohovich</div>
-                  <svg className="hidden md:block mx-1 h-5 w-5 text-indigo-600" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="hidden md:block mx-1 h-5 w-5 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M11 0h3L9 20H6l5-20z" />
                   </svg>
                   <div className="text-base leading-6 font-medium text-gray-500">Software Engineer, Nike</div>

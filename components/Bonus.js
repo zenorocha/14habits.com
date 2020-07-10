@@ -44,7 +44,7 @@ class Bonus extends React.Component {
           </svg>
           <div className="text-center">
             <h2 className="text-3xl leading-9 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
-              {i18n.t('bonus.title')} / <span className="text-indigo-600">{i18n.t('bonus.habit')} #{this.props.habit}</span>
+              {i18n.t('bonus.title')} / <span className="text-purple-600">{i18n.t('bonus.habit')} #{this.props.habit}</span>
             </h2>
             <p className="mt-4 text-lg leading-6 text-gray-500">
               {i18n.t(`bonus.${this.props.habit}`)}
@@ -57,12 +57,12 @@ class Bonus extends React.Component {
                 <div className="sm:col-span-2">
                   <label htmlFor="email" className="block text-sm font-medium leading-5 text-gray-700">Email</label>
                   <div className="mt-1 relative rounded-md shadow-sm">
-                    <input type="email" id="email" name="email_address" placeholder={i18n.t('enterEmail')} required className="form-input py-3 px-4 block w-full transition ease-in-out duration-150" />
+                    <input type="email" id="email" name="email_address" placeholder={i18n.t('enterEmail')} required className="form-input py-3 px-4 block w-full transition ease-in-out duration-300" />
                   </div>
                 </div>
                 <div className="sm:col-span-2">
                   <span className="w-full inline-flex rounded-md shadow-sm">
-                    <button data-element="submit" className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition ease-in-out duration-150 mt-5">
+                    <button data-element="submit" className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:border-purple-700 focus:shadow-outline-purple active:bg-purple-900 transition ease-in-out duration-300 mt-5">
                       {i18n.t('bonus.cta')}
                     </button>
                   </span>

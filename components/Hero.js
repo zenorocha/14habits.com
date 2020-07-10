@@ -26,7 +26,7 @@ class Hero extends React.Component {
           <h2 className="mt-1 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
             {i18n.t('titleFirstPart')}&nbsp;
             <br className="hidden md:inline" />
-            <span className="text-indigo-600">{i18n.t('titleSecondPart')}</span>
+            <span className="text-purple-600">{i18n.t('titleSecondPart')}</span>
           </h2>
           <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
             {i18n.t('headerFirstParagraph')}
@@ -44,7 +44,7 @@ class Hero extends React.Component {
               <div data-element="fields">
                 <div className="mt-3 sm:flex">
                   <input type="email" name="email_address" placeholder={i18n.t('enterEmail')} required className="appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1" />
-                  <button data-element="submit" className="mt-3 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-indigo-600 shadow-sm hover:bg-indigo-700 focus:outline-none focus:shadow-outline active:bg-indigo-900 transition duration-150 ease-in-out sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
+                  <button data-element="submit" className="mt-3 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-purple-600 shadow-sm hover:bg-purple-700 focus:outline-none focus:shadow-outline active:bg-purple-900 transition duration-300 ease-in-out sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
                     {i18n.t('notifyMe')}
                   </button>
                 </div>
