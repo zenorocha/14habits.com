@@ -2,6 +2,11 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+::selection {
+  background: #7e3af2;
+  color: white;
+}
+
 .love {
   display: inline-block;
   position: relative;
