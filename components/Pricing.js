@@ -1,54 +1,19 @@
 import React from 'react';
 import i18n from '../lib/i18n';
+import getPricing from '../lib/pricing';
 
 class Pricing extends React.Component {
-  state = {
-    price: '$9',
-    cents: '.99',
-    baseUrl: 'https://www.amazon.com/dp/',
-  };
+  constructor(props) {
+    super(props);
+
+    const { price, cents, baseUrl } = getPricing();
+    this.state = { price, cents, baseUrl };
+  }
 
   componentDidUpdate(prevProps) {
     if (this.props.geo !== prevProps.geo) {
-      this.checkCountry();
-    }
-  }
-
-  checkCountry() {
-    if (!this.props.geo) return;
-
-    if (this.props.geo.country === 'BR') {
-      this.setState({ price: 'R$24', cents: '.99', baseUrl: 'https://www.amazon.com.br/dp/', });
-    }
-    else if (this.props.geo.country === 'IN') {
-      this.setState({ price: '₹449', cents: null, baseUrl: 'https://www.amazon.in/dp/', });
-    }
-    else if (this.props.geo.country === 'GB') {
-      this.setState({ price: '£7', cents: '.95', baseUrl: 'https://www.amazon.co.uk/dp/', });
-    }
-    else if (this.props.geo.country === 'DE') {
-      this.setState({ price: '€8', cents: '.87', baseUrl: 'https://www.amazon.de/dp/', });
-    }
-    else if (this.props.geo.country === 'FR') {
-      this.setState({ price: '€8', cents: '.87', baseUrl: 'https://www.amazon.fr/dp/', });
-    }
-    else if (this.props.geo.country === 'ES') {
-      this.setState({ price: '€8', cents: '.87', baseUrl: 'https://www.amazon.es/dp/', });
-    }
-    else if (this.props.geo.country === 'IT') {
-      this.setState({ price: '€8', cents: '.87', baseUrl: 'https://www.amazon.it/dp/', });
-    }
-    else if (this.props.geo.country === 'NL') {
-      this.setState({ price: '€8', cents: '.87', baseUrl: 'https://www.amazon.nl/dp/', });
-    }
-    else if (this.props.geo.country === 'JP') {
-      this.setState({ price: '¥1072', cents: null, baseUrl: 'https://www.amazon.co.jp/dp/', });
-    }
-    else if (this.props.geo.country === 'MX') {
-      this.setState({ price: '$149', cents: '.99', baseUrl: 'https://www.amazon.com.mx/dp/', });
-    }
-    else if (this.props.geo.country === 'AU') {
-      this.setState({ price: '$11', cents: '.99', baseUrl: 'https://www.amazon.com.au/dp/', });
+      const { price, cents, baseUrl } = getPricing();
+      this.setState({ price, cents, baseUrl });
     }
   }
 

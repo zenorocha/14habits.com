@@ -27,12 +27,12 @@ class Index extends React.Component {
 
   renderHead() {
     return <Head>
-      <title>{i18n.t('title')}</title>
-      <meta content={i18n.t('title')} property="og:title" />
-      <meta content={i18n.t('description')} name="description" />
-      <meta content={i18n.t('description')} property="og:description" />
-      <meta content={i18n.t('ogUrl')} property="og:url" />
-      <meta content={i18n.t('ogImageUrl')} property="og:image" />
+      <title>{i18n.t('meta.title')}</title>
+      <meta content={i18n.t('meta.title')} property="og:title" />
+      <meta content={i18n.t('meta.description')} name="description" />
+      <meta content={i18n.t('meta.description')} property="og:description" />
+      <meta content={i18n.t('meta.ogUrl')} property="og:url" />
+      <meta content={i18n.t('meta.ogImageUrl')} property="og:image" />
     </Head>
   }
 
@@ -42,7 +42,7 @@ class Index extends React.Component {
     return <div>
       {this.renderHead()}
       <Banner locale={this.props.locale} geo={this.state.geo} />
-      <Hero locale={this.props.locale} />
+      <Hero locale={this.props.locale} geo={this.state.geo} />
       <Author locale={this.props.locale} />
       <Logos locale={this.props.locale} />
       <Interviews locale={this.props.locale} />
