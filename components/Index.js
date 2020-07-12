@@ -8,6 +8,7 @@ import Testimonials from './Testimonials';
 import Toc from './Toc';
 import Logos from './Logos';
 import Interviews from './Interviews';
+import FreeChapter from './FreeChapter';
 import Faq from './Faq';
 import Pricing from './Pricing';
 import Footer from './Footer';
@@ -45,6 +46,7 @@ class Index extends React.Component {
       <Author locale={this.props.locale} />
       <Logos locale={this.props.locale} />
       <Interviews locale={this.props.locale} />
+      <FreeChapter locale={this.props.locale} />
       <Toc locale={this.props.locale} />
       <Testimonials locale={this.props.locale} />
       <Pricing locale={this.props.locale} geo={this.state.geo} />
