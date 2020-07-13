@@ -17,7 +17,7 @@ class Testimonials extends React.Component {
         </svg>
 
         <div className="relative">
-          <img src="/static/img/logo-nike.svg" className="mx-auto" height="100" width="100" />
+          <img src="/static/img/logo-nike.svg" className="mx-auto" height="100" width="100" alt="Nike" />
           <blockquote className="mt-8">
             <div className="max-w-6xl mx-auto text-center text-2xl leading-9 font-medium text-gray-900">
               <p>&ldquo;{i18n.t('testimonial.quote')}&rdquo;</p>
