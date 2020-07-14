@@ -48,17 +48,22 @@ class Hero extends React.Component {
       </div>
     }
 
-    return <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-      <div className="rounded-md shadow">
-        <a href={`${this.state.baseUrl}${i18n.t('pricing.amazonId')}`} className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:border-purple-900 focus:shadow-outline-purple transition duration-300 ease-in-out md:py-4 md:text-lg md:px-10">
-          {i18n.t('pricing.cta')}
-        </a>
+    return <div>
+      <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+        <div className="rounded-md shadow">
+          <a href={`${this.state.baseUrl}${i18n.t('pricing.amazonId')}`} className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:border-purple-900 focus:shadow-outline-purple transition duration-300 ease-in-out md:py-4 md:text-lg md:px-10">
+            {i18n.t('pricing.primaryCta')}
+          </a>
+        </div>
+        <div className="mt-3 sm:mt-0 sm:ml-3">
+          <a href={i18n.t('pricing.gumroadUrl')} className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-purple-700 bg-purple-100 hover:text-purple-600 hover:bg-purple-200 focus:outline-none focus:shadow-outline-purple focus:border-purple-300 transition duration-300 ease-in-out md:py-4 md:text-lg md:px-10">
+            {i18n.t('pricing.secondaryCta')}
+          </a>
+        </div>
       </div>
-      <div className="mt-3 sm:mt-0 sm:ml-3">
-        <a download href={i18n.t('freeChapter.url')} className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-purple-700 bg-purple-100 hover:text-purple-600 hover:bg-purple-200 focus:outline-none focus:shadow-outline-purple focus:border-purple-300 transition duration-300 ease-in-out md:py-4 md:text-lg md:px-10">
-          {i18n.t('freeChapter.title')}
-        </a>
-      </div>
+      <p className="mt-3 text-sm text-gray-500 sm:mt-5 sm:text-base">
+        {i18n.t('hero.or')}<a download href={i18n.t('freeChapter.url')} className="text-purple-600 border-b-2 border-transparent hover:border-purple-600 transition ease-in-out duration-300">{i18n.t('hero.download')}</a>{i18n.t('hero.forFree')}
+      </p>
     </div>
   }
 

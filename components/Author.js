@@ -8,7 +8,7 @@ class Author extends React.Component {
     return <div className="bg-gray-50">
       <div className="max-w-screen-xl mx-auto py-16">
         <h2 className="text-5xl mb-4 font-semibold text-gray-900 px-4">
-          <span className="text-purple-600">{i18n.t('author.who')}</span>&nbsp;{i18n.t('author.wrote')}
+          <span className="text-purple-600">{i18n.t('author.titleFirstPart')}</span>&nbsp;{i18n.t('author.titleSecondPart')}
         </h2>
         <div className="flex-none sm:flex">
           <div className="sm:flex-1 px-4">

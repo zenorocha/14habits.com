@@ -69,7 +69,17 @@ class Pricing extends React.Component {
                             </svg>
                           </div>
                           <p className="ml-3 text-base leading-6 font-medium text-gray-500">
-                            {i18n.t('pricing.format')}
+                            {i18n.t('pricing.primaryFormat')}
+                          </p>
+                        </li>
+                        <li className="mt-4 flex items-start">
+                          <div className="flex-shrink-0">
+                            <svg className="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/>
+                            </svg>
+                          </div>
+                          <p className="ml-3 text-base leading-6 font-medium text-gray-500">
+                            {i18n.t('pricing.secondaryFormat')}
                           </p>
                         </li>
                         <li className="mt-4 flex items-start">
@@ -104,11 +114,12 @@ class Pricing extends React.Component {
                         </li>
                       </ul>
                       <div className="mt-10">
-                        <div className="rounded-lg shadow-md">
-                          <a href={`${this.state.baseUrl}${i18n.t('pricing.amazonId')}`} className="block w-full text-center rounded-lg border border-transparent bg-purple-600 px-6 py-4 text-xl leading-6 font-medium text-white hover:bg-purple-700 active:bg-purple-900 focus:outline-none focus:border-purple-700 focus:shadow-outline-purple transition ease-in-out duration-150">
-                            {i18n.t('pricing.cta')}
-                          </a>
-                        </div>
+                        <a href={`${this.state.baseUrl}${i18n.t('pricing.amazonId')}`} className="block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-medium text-white bg-purple-600 hover:bg-purple-700 active:bg-purple-900 focus:outline-none focus:border-purple-700 focus:shadow-outline-purple transition ease-in-out duration-150">
+                          {i18n.t('pricing.primaryCta')}
+                        </a>
+                        <a href={i18n.t('pricing.gumroadUrl')} className="mt-4 block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-medium text-purple-700 bg-purple-100 hover:text-purple-600 hover:bg-purple-200 focus:outline-none focus:shadow-outline-purple focus:border-purple-300 transition ease-in-out duration-150">
+                          {i18n.t('pricing.secondaryCta')}
+                        </a>
                       </div>
                     </div>
                   </div>
