@@ -29,10 +29,15 @@ class Index extends React.Component {
     return <Head>
       <title>{i18n.t('meta.title')}</title>
       <meta content={i18n.t('meta.title')} property="og:title" />
+      <meta content={i18n.t('meta.title')} name="twitter:title" />
       <meta content={i18n.t('meta.description')} name="description" />
       <meta content={i18n.t('meta.description')} property="og:description" />
+      <meta content={i18n.t('meta.description')} name="twitter:description" />
       <meta content={i18n.t('meta.ogUrl')} property="og:url" />
       <meta content={i18n.t('meta.ogImageUrl')} property="og:image" />
+      <meta content={i18n.t('meta.ogImageUrl')} name="twitter:image" />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:creator" content="@zenorocha" />
     </Head>
   }
 
