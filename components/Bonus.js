@@ -13,8 +13,8 @@ class Bonus extends React.Component {
       <meta content={title} property="og:title" />
       <meta content={description} name="description" />
       <meta content={description} property="og:description" />
-      <meta content={i18n.t('ogUrl')} property="og:url" />
-      <meta content={i18n.t('ogImageUrl')} property="og:image" />
+      <meta content={i18n.t('meta.ogUrl')} property="og:url" />
+      <meta content={i18n.t('meta.ogImageUrl')} property="og:image" />
     </Head>
   }
 
@@ -57,7 +57,7 @@ class Bonus extends React.Component {
                 <div className="sm:col-span-2">
                   <label htmlFor="email" className="block text-sm font-medium leading-5 text-gray-700">Email</label>
                   <div className="mt-1 relative rounded-md shadow-sm">
-                    <input type="email" id="email" name="email_address" placeholder={i18n.t('enterEmail')} required className="form-input py-3 px-4 block w-full transition ease-in-out duration-300" />
+                    <input type="email" id="email" name="email_address" placeholder={i18n.t('hero.enterEmail')} required className="form-input py-3 px-4 block w-full transition ease-in-out duration-300" />
                   </div>
                 </div>
                 <div className="sm:col-span-2">
