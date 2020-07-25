@@ -43,8 +43,8 @@ class Hero extends React.Component {
     return <div className="mx-auto max-w-screen-xl px-4 mt-7 mb-8 sm:mt-11 sm:mb-12 sm:px-6 md:mt-19 md:mb-20 xl:mt-23 xl:mb-24">
       <div className="lg:grid lg:grid-cols-12 lg:gap-8">
         <div className="md:max-w-1xl md:mx-auto lg:col-span-8">
-          <div className="text-sm font-semibold uppercase tracking-wide text-gray-500 sm:text-base lg:text-sm xl:text-base">
-            {i18n.t('hero.availability')}
+          <div className="text-base uppercase tracking-wide mb-4">
+            <img className="inline h-5 relative" style={{ top: 3 }} src="/static/img/amazon.svg" alt="amazon.com" /> best-seller
           </div>
           <h2 className="mt-1 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
             {i18n.t('hero.titleFirstPart')}&nbsp;
