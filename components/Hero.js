@@ -18,36 +18,6 @@ class Hero extends React.Component {
   }
 
   ctas() {
-    let convertKit = {
-      form: '1508065',
-      uid: '8c01414042'
-    };
-
-    if (this.props.locale === "pt-BR") {
-      convertKit = {
-        form: '1508165',
-        uid: 'b73173af97'
-      };
-
-      return <div className="mt-5 sm:max-w-lg lg:mx-0">
-        <p className="text-base font-medium text-gray-900">
-          {i18n.t('hero.notifyCta')}
-        </p>
-
-        <form action={`https://app.convertkit.com/forms/${convertKit.form}/subscriptions`} data-sv-form={convertKit.form} data-uid={convertKit.uid} data-format="inline" data-version="5">
-          <ul data-element="errors"></ul>
-          <div data-element="fields">
-            <div className="mt-3 sm:flex">
-              <input type="email" name="email_address" placeholder={i18n.t('hero.enterEmail')} required className="appearance-none block w-full px-3 py-3 border border-gray-300 text-base leading-6 rounded-md placeholder-gray-500 shadow-sm focus:outline-none focus:placeholder-gray-400 focus:shadow-outline focus:border-blue-300 transition duration-150 ease-in-out sm:flex-1" />
-              <button data-element="submit" className="mt-3 w-full px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-purple-600 shadow-sm hover:bg-purple-700 focus:outline-none focus:shadow-outline active:bg-purple-900 transition duration-300 ease-in-out sm:mt-0 sm:ml-3 sm:flex-shrink-0 sm:inline-flex sm:items-center sm:w-auto">
-                {i18n.t('hero.notifyMe')}
-              </button>
-            </div>
-          </div>
-        </form>
-      </div>
-    }
-
     return <div>
       <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
         <div className="rounded-md shadow">
