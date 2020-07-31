@@ -126,7 +126,7 @@ class Pricing extends React.Component {
                 </div>
               </div>
             </div>
-            <p className="text-center text-base text-gray-700 mt-10">{i18n.t('pricing.moreThan')} <span className="font-semibold">469 {i18n.t('pricing.copies')}</span> {i18n.t('pricing.sold')}</p>
+            <p className="text-center text-base text-gray-700 mt-10">{i18n.t('pricing.moreThan')} <span className="font-semibold">769 {i18n.t('pricing.copies')}</span> {i18n.t('pricing.sold')}</p>
           </div>
         </div>
       </div>
