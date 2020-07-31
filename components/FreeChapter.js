@@ -5,6 +5,10 @@ class FreeChapter extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
+    if (this.props.locale === "es-ES") {
+      return <div />
+    }
+
     return <div className="bg-white">
       <div className="max-w-screen-xl mx-auto px-4 py-12 sm:px-6 md:py-16 md:px-8">
         <div className="px-6 py-6 bg-book-purple rounded-lg md:py-12 md:px-12 lg:py-16 lg:px-16 md:flex md:items-center">
