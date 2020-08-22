@@ -18,6 +18,12 @@ class Pricing extends React.Component {
   }
 
   render() {
+    i18n.locale = this.props.locale;
+
+    if (this.props.locale === "es-ES") {
+      return <div />
+    }
+
     return <div>
       <div className="bg-gray-900">
         <div className="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">

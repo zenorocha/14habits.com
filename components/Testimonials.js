@@ -5,6 +5,10 @@ class Testimonials extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
+    if (this.props.locale === "es-ES") {
+      return <div />
+    }
+
     return <section className="bg-gray-50 pt-10 pb-12 overflow-hidden md:pt-18 md:pb-20 lg:pt-22 lg:pb-24">
       <div className="relative max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <svg className="absolute top-full right-full transform translate-x-1/3 -translate-y-1/4 lg:translate-x-1/2 xl:-translate-y-1/2" width="404" height="404" fill="none" viewBox="0 0 404 404" role="img">

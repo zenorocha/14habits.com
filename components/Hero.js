@@ -19,14 +19,16 @@ class Hero extends React.Component {
 
   ctas() {
     let convertKit = {
+      redirectPath: '/',
       form: '1508065',
       uid: '8c01414042'
     };
 
     if (this.props.locale === "es-ES") {
       convertKit = {
-        form: '1508165',
-        uid: 'b73173af97'
+        redirectPath: '/es',
+        form: '1613383',
+        uid: 'deb5b477d6'
       };
 
       return <div className="mt-5 sm:max-w-lg lg:mx-0">
@@ -34,7 +36,7 @@ class Hero extends React.Component {
           {i18n.t('hero.notifyCta')}
         </p>
 
-        <form action={`https://app.convertkit.com/forms/${convertKit.form}/subscriptions`} data-sv-form={convertKit.form} data-uid={convertKit.uid} data-format="inline" data-version="5">
+        <form action={`https://app.convertkit.com/forms/${convertKit.form}/subscriptions`} data-options={`{"settings":{"after_subscribe":{"action":"redirect","redirect_url":"https://14habits.com${convertKit.redirectPath}?success=true"}}}`} data-sv-form={convertKit.form} data-uid={convertKit.uid} data-format="inline" data-version="5">
           <ul data-element="errors"></ul>
           <div data-element="fields">
             <div className="mt-3 sm:flex">
@@ -67,6 +69,24 @@ class Hero extends React.Component {
     </div>
   }
 
+  renderCoverContainer() {
+    if (this.props.locale === "es-ES") {
+      return <div className="book-container">
+        {this.renderCover()}
+      </div>
+    }
+
+    return <a className="book-container" href={`${this.state.baseUrl}${i18n.t('pricing.amazonId')}`}>
+      {this.renderCover()}
+    </a>
+  }
+
+  renderCover() {
+    return <div className="book">
+      <img src={i18n.t('hero.bookCover')} alt={i18n.t('meta.title')} />
+    </div>
+  }
+
   render() {
     i18n.locale = this.props.locale;
 
@@ -90,11 +110,7 @@ class Hero extends React.Component {
           {this.ctas()}
         </div>
         <div className="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-4 lg:flex lg:items-center">
-          <a className="book-container" href={`${this.state.baseUrl}${i18n.t('pricing.amazonId')}`}>
-            <div className="book">
-              <img src={i18n.t('hero.bookCover')} alt={i18n.t('meta.title')} />
-            </div>
-          </a>
+          {this.renderCoverContainer()}
         </div>
       </div>
     </div>

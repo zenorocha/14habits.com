@@ -3,7 +3,7 @@ import Index from '../../components/Index';
 
 class IndexSpanish extends React.Component {
   render() {
-    return <Index locale="es" query={this.props.query} />
+    return <Index locale="es-ES" query={this.props.query} />
   }
 }
 

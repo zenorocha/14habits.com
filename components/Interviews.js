@@ -165,6 +165,10 @@ class Interviews extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
+    if (this.props.locale === "es-ES") {
+      return <div />
+    }
+
     return <div className="bg-white">
       <div className="max-w-screen-xl mx-auto pt-16 pb-4 px-4">
         <h2 className="text-3xl leading-9 font-extrabold text-gray-900">
