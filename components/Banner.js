@@ -1,8 +1,16 @@
 import React from 'react';
 import Link from 'next/link';
+import { countries } from 'countries-list';
+import hasTranslation from '../lib/countries';
 
 class Banner extends React.Component {
   state = {
+    path: '',
+    countryCode: '',
+    countryNative: '',
+    ctaText: '',
+    shortText: '',
+    largeText: '',
     isVisible: false
   };
 
@@ -13,8 +21,28 @@ class Banner extends React.Component {
   }
 
   checkCountry() {
-    if (this.props.locale !== 'pt-BR' && this.props.geo && this.props.geo.country === 'BR') {
-      this.setState({ isVisible: true });
+    if (!this.props.geo?.country) return;
+
+    let newState = {
+      path: hasTranslation(this.props.geo.country),
+      countryCode: this.props.geo.country,
+      countryNative: countries[this.props.geo.country].native,
+    };
+
+    if (this.props.locale !== 'pt-BR' && newState.path === 'br') {
+      newState.isVisible = true;
+      newState.ctaText = 'Ler em Português';
+      newState.shortText = `Opa! Notei que você é do ${newState.countryNative} :)`;
+      newState.largeText = `Opa! Notei que você é do ${newState.countryNative}, quer ler em Português?`;
+      this.setState(newState);
+    }
+
+    if (this.props.locale !== 'es-ES' && newState.path === 'es') {
+      newState.isVisible = true;
+      newState.ctaText = 'Leer en Español';
+      newState.shortText = `¡Hola! Noté que eres de ${newState.countryNative} :)`;
+      newState.largeText = `¡Hola! Noté que eres de ${newState.countryNative}, ¿quieres leer en Español?`;
+      this.setState(newState);
     }
   }
 
@@ -29,22 +57,22 @@ class Banner extends React.Component {
           <div className="flex items-center justify-between flex-wrap">
             <div className="w-0 flex-1 flex items-center">
               <span className="p-1 rounded-lg bg-purple-800">
-                <img className="rounded-lg" src="/static/img/flag-br.svg" alt="Brazil Flag" width="36" height="36" />
+                <img className="rounded-lg" src={`/static/img/flags/${this.state.countryCode}.svg`} alt={`${this.state.countryNative} Flag`} width="40" height="30" />
               </span>
               <p className="ml-3 font-medium text-white truncate">
                 <span className="md:hidden">
-                  Opa! Notei que você é do Brasil :)
+                  {this.state.shortText}
                 </span>
                 <span className="hidden md:inline">
-                  Opa! Notei que você é do Brasil, quer ler em Português?
+                  {this.state.largeText}
                 </span>
               </p>
             </div>
             <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
               <div className="rounded-md shadow-sm">
-                <Link href="/br">
+                <Link href={`/${this.state.path}`}>
                   <a className="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-medium rounded-md text-purple-600 bg-white hover:text-purple-500 focus:outline-none focus:shadow-outline transition ease-in-out duration-300">
-                    Ler em Português
+                    {this.state.ctaText}
                   </a>
                 </Link>
               </div>
