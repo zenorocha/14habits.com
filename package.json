@@ -7,7 +7,7 @@
     "build": "next build",
     "export": "next export",
     "sitemap": "node sitemap.js",
-    "deploy": "now --prod"
+    "deploy": "vercel --prod"
   },
   "dependencies": {
     "@tailwindcss/ui": "^0.3.0",
