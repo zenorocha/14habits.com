@@ -1,12 +1,11 @@
 import React from 'react';
 import i18n from '../lib/i18n';
-import isSupportedLocale from '../lib/locales';
 
 class FreeChapter extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
-    if (!isSupportedLocale(this.props.locale)) {
+    if (this.props.locale === "es-ES") {
       return <div />
     }
 
