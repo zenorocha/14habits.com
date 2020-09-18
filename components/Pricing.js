@@ -1,6 +1,7 @@
 import React from 'react';
 import i18n from '../lib/i18n';
 import getPricing from '../lib/pricing';
+import isSupportedLocale from '../lib/locales';
 
 class Pricing extends React.Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class Pricing extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
-    if (this.props.locale === "es-ES") {
+    if (!isSupportedLocale(this.props.locale)) {
       return <div />
     }
 
