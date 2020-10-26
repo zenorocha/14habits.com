@@ -20,10 +20,6 @@ class Pricing extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
-    if (this.props.locale === "es-ES") {
-      return <div />
-    }
-
     return <div>
       <div className="bg-gray-900">
         <div className="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
@@ -132,7 +128,7 @@ class Pricing extends React.Component {
                 </div>
               </div>
             </div>
-            <p className="text-center text-base text-gray-700 mt-10">{i18n.t('pricing.moreThan')} <span className="font-semibold">1422 {i18n.t('pricing.copies')}</span> {i18n.t('pricing.sold')}</p>
+            <p className="text-center text-base text-gray-700 mt-10">{i18n.t('pricing.moreThan')} <span className="font-semibold">1932 {i18n.t('pricing.copies')}</span> {i18n.t('pricing.sold')}</p>
           </div>
         </div>
       </div>

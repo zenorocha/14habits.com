@@ -5,10 +5,6 @@ class Logos extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
-    if (this.props.locale === "es-ES") {
-      return <div />
-    }
-
     return <div className="bg-book-purple">
       <div className="max-w-screen-xl mx-auto pt-12 px-4 sm:px-6 lg:px-8">
         <ul className="mx-auto text-center">

@@ -5,10 +5,6 @@ class Toc extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
-    if (this.props.locale === "es-ES") {
-      return <div />
-    }
-
     return <div className="bg-gray-900 relative overflow-hidden">
       <div className="max-w-screen-xl mx-auto py-15 text-lg">
         <div className="hidden sm:block sm:absolute sm:inset-0">
