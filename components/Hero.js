@@ -18,16 +18,28 @@ class Hero extends React.Component {
   }
 
   ctas() {
+    let primaryCta = i18n.t('pricing.book.primaryCta');
+    let secondaryCta = i18n.t('pricing.book.secondaryCta');
+    let primaryCtaUrl = `${this.state.baseUrl}${i18n.t('pricing.book.amazonId')}`;
+    let secondaryCtaUrl = i18n.t('pricing.book.gumroadUrl');
+
+    if (this.props.locale === 'en-US') {
+      primaryCta = i18n.t('hero.primaryCta');
+      secondaryCta = i18n.t('hero.secondaryCta');
+      primaryCtaUrl = '#ebook';
+      secondaryCtaUrl = '#audiobook';
+    }
+
     return <div>
       <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
         <div className="rounded-md shadow">
-          <a href={`${this.state.baseUrl}${i18n.t('pricing.amazonId')}`} className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:border-purple-900 focus:shadow-outline-purple transition duration-300 ease-in-out md:py-4 md:text-lg md:px-10">
-            {i18n.t('pricing.primaryCta')}
+          <a href={primaryCtaUrl} className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-purple-600 hover:bg-purple-700 focus:outline-none focus:border-purple-900 focus:shadow-outline-purple transition duration-300 ease-in-out md:py-4 md:text-lg md:px-10">
+            {primaryCta}
           </a>
         </div>
         <div className="mt-3 sm:mt-0 sm:ml-3">
-          <a href={i18n.t('pricing.gumroadUrl')} className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-purple-700 bg-purple-100 hover:text-purple-600 hover:bg-purple-200 focus:outline-none focus:shadow-outline-purple focus:border-purple-300 transition duration-300 ease-in-out md:py-4 md:text-lg md:px-10">
-            {i18n.t('pricing.secondaryCta')}
+          <a href={secondaryCtaUrl} className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-purple-700 bg-purple-100 hover:text-purple-600 hover:bg-purple-200 focus:outline-none focus:shadow-outline-purple focus:border-purple-300 transition duration-300 ease-in-out md:py-4 md:text-lg md:px-10">
+            {secondaryCta}
           </a>
         </div>
       </div>
@@ -64,11 +76,11 @@ class Hero extends React.Component {
           <div className="text-base uppercase tracking-wide mb-4">
             <img className="inline h-5 relative" style={{ top: 3 }} src="/static/img/amazon.svg" alt="amazon.com" /> best-seller
           </div>
-          <h2 className="mt-1 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
+          <h1 className="mt-1 text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:leading-none sm:text-6xl lg:text-5xl xl:text-6xl">
             {i18n.t('hero.titleFirstPart')}&nbsp;
             <br className="hidden md:inline" />
             <span className="text-purple-600">{i18n.t('hero.titleSecondPart')}</span>
-          </h2>
+          </h1>
           <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
             {i18n.t('hero.headerFirstParagraph')}
           </p>

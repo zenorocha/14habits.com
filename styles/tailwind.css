@@ -109,3 +109,15 @@
   border-radius: 0 2px 2px 0;
   box-shadow: -10px 0 50px 10px #666;
 }
+
+.ribbon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 150px;
+  height: 30px;
+  margin-right: -40px;
+  margin-top: 20px;
+  padding-top: 5px;
+  transform: rotate(45deg); /* Standard syntax */
+}
