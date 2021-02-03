@@ -103,7 +103,7 @@ class PricingDouble extends React.Component {
                       </li>
                     </ul>
                     <div>
-                      <a href={`${this.state.baseUrl}${i18n.t('pricing.book.amazonId')}`} className="block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-medium text-white bg-purple-600 hover:bg-purple-700 active:bg-purple-900 focus:outline-none focus:border-purple-700 focus:shadow-outline-purple transition ease-in-out duration-150">
+                      <a href={`${this.state.bookPrice.baseUrl}${i18n.t('pricing.book.amazonId')}`} className="block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-medium text-white bg-purple-600 hover:bg-purple-700 active:bg-purple-900 focus:outline-none focus:border-purple-700 focus:shadow-outline-purple transition ease-in-out duration-150">
                         {i18n.t('pricing.book.primaryCta')}
                       </a>
                       <a href={i18n.t('pricing.book.gumroadUrl')} className="mt-4 block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-medium text-purple-700 bg-purple-100 hover:text-purple-600 hover:bg-purple-200 focus:outline-none focus:shadow-outline-purple focus:border-purple-300 transition ease-in-out duration-150">
