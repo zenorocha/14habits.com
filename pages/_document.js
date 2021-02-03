@@ -21,9 +21,11 @@ export default class extends Document {
           <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
 
           <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+          <script async src="https://platform.twitter.com/widgets.js"></script>
 
           <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`} />
-          <script dangerouslySetInnerHTML={{ __html: `
+          <script dangerouslySetInnerHTML={{
+            __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
