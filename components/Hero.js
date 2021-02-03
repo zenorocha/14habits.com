@@ -23,7 +23,7 @@ class Hero extends React.Component {
     let primaryCtaUrl = `${this.state.baseUrl}${i18n.t('pricing.book.amazonId')}`;
     let secondaryCtaUrl = i18n.t('pricing.book.gumroadUrl');
 
-    if (this.props.locale === 'en-US') {
+    if (this.props.locale === 'en-US' || 'pt-BR') {
       primaryCta = i18n.t('hero.primaryCta');
       secondaryCta = i18n.t('hero.secondaryCta');
       primaryCtaUrl = '#ebook';

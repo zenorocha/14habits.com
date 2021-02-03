@@ -114,7 +114,9 @@ class PricingDouble extends React.Component {
                 </div>
 
                 <div className="flex flex-col rounded-lg shadow-lg relative overflow-hidden">
-                  <div className="ribbon uppercase font-semibold bg-yellow-100 text-yellow-700 text-sm text-center whitespace-no-wrap px-4">new</div>
+                  <div className="ribbon uppercase font-semibold bg-yellow-100 text-yellow-700 text-sm text-center whitespace-no-wrap px-4">
+                    {i18n.t('pricing.audiobook.new')}
+                  </div>
                   <div className="px-6 py-8 bg-white sm:p-10 sm:pb-6">
                     <div>
                       <h3 id="audiobook" className="inline-flex px-4 py-1 rounded-full text-sm leading-5 font-semibold tracking-wide uppercase bg-purple-100 text-purple-600">
