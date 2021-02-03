@@ -21,7 +21,7 @@ class Audiobook extends React.Component {
             </p>
           </div>
           <div className="text-lg text-gray-600 sm:flex-1 px-4">
-            <img className="mb-4 rounded-md" src="/static/img/audiobook.jpg" alt="Zeno Rocha and Jonathan Lundy" />
+            <img className="mb-4 rounded-md" src={i18n.t('audiobook.photo')} alt="Audiobook Recording" />
           </div>
         </div>
       </div>
