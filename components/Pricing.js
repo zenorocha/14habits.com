@@ -1,18 +1,18 @@
 import React from 'react';
 import i18n from '../lib/i18n';
-import getPricing from '../lib/pricing';
+import { getBookPrice } from '../lib/pricing';
 
 class Pricing extends React.Component {
   constructor(props) {
     super(props);
 
-    const { price, cents, baseUrl } = getPricing();
+    const { price, cents, baseUrl } = getBookPrice();
     this.state = { price, cents, baseUrl };
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.geo !== prevProps.geo) {
-      const { price, cents, baseUrl } = getPricing();
+      const { price, cents, baseUrl } = getBookPrice();
       this.setState({ price, cents, baseUrl });
     }
   }

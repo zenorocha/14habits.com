@@ -1,19 +1,21 @@
 import React from 'react';
 import i18n from '../lib/i18n';
-import getPricing from '../lib/pricing';
+import { getAudiobookPrice, getBookPrice } from '../lib/pricing';
 
 class PricingDouble extends React.Component {
   constructor(props) {
     super(props);
 
-    const { price, cents, baseUrl } = getPricing();
-    this.state = { price, cents, baseUrl };
+    const bookPrice = getBookPrice();
+    const audiobookPrice = getAudiobookPrice();
+    this.state = { audiobookPrice, bookPrice };
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.geo !== prevProps.geo) {
-      const { price, cents, baseUrl } = getPricing();
-      this.setState({ price, cents, baseUrl });
+      const bookPrice = getBookPrice();
+      const audiobookPrice = getAudiobookPrice();
+      this.setState({ audiobookPrice, bookPrice });
     }
   }
 
@@ -46,10 +48,10 @@ class PricingDouble extends React.Component {
                       </h3>
                     </div>
                     <div className="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
-                      {this.state.price}
-                      {this.state.cents &&
+                      {this.state.bookPrice.value}
+                      {this.state.bookPrice.cents &&
                         <span className="text-2xl leading-8 font-medium text-gray-500">
-                          {this.state.cents}
+                          {this.state.bookPrice.cents}
                         </span>
                       }
                     </div>
@@ -120,10 +122,12 @@ class PricingDouble extends React.Component {
                       </h3>
                     </div>
                     <div className="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
-                      $19
-                      <span className="text-2xl leading-8 font-medium text-gray-500">
-                        .99
-                      </span>
+                      {this.state.audiobookPrice.value}
+                      {this.state.audiobookPrice.cents &&
+                        <span className="text-2xl leading-8 font-medium text-gray-500">
+                          {this.state.audiobookPrice.cents}
+                        </span>
+                      }
                     </div>
                   </div>
                   <div className="flex-1 flex flex-col justify-between px-6 pt-6 pb-8 bg-gray-50 space-y-6 sm:p-10 sm:pt-6">
@@ -173,10 +177,10 @@ class PricingDouble extends React.Component {
                       </li>
                     </ul>
                     <div>
-                      <a href={i18n.t('pricing.audiobook.audibleUrl')} className="block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-medium text-white bg-purple-600 hover:bg-purple-700 active:bg-purple-900 focus:outline-none focus:border-purple-700 focus:shadow-outline-purple transition ease-in-out duration-150">
+                      <a href={i18n.t('pricing.audiobook.gumroadUrl')} className="block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-medium text-white bg-purple-600 hover:bg-purple-700 active:bg-purple-900 focus:outline-none focus:border-purple-700 focus:shadow-outline-purple transition ease-in-out duration-150">
                         {i18n.t('pricing.audiobook.primaryCta')}
                       </a>
-                      <a href={i18n.t('pricing.audiobook.gumroadUrl')} className="mt-4 block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-medium text-purple-700 bg-purple-100 hover:text-purple-600 hover:bg-purple-200 focus:outline-none focus:shadow-outline-purple focus:border-purple-300 transition ease-in-out duration-150">
+                      <a download href={i18n.t('audiobook.sample')} className="mt-4 block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-medium text-purple-700 bg-purple-100 hover:text-purple-600 hover:bg-purple-200 focus:outline-none focus:shadow-outline-purple focus:border-purple-300 transition ease-in-out duration-150">
                         {i18n.t('pricing.audiobook.secondaryCta')}
                       </a>
                     </div>

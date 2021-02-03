@@ -1,18 +1,18 @@
 import React from 'react';
 import i18n from '../lib/i18n';
-import getPricing from '../lib/pricing';
+import { getBookPrice } from '../lib/pricing';
 
 class Hero extends React.Component {
   constructor(props) {
     super(props);
 
-    const { baseUrl } = getPricing();
+    const { baseUrl } = getBookPrice();
     this.state = { baseUrl };
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.geo !== prevProps.geo) {
-      const { baseUrl } = getPricing();
+      const { baseUrl } = getBookPrice();
       this.setState({ baseUrl });
     }
   }
@@ -56,7 +56,7 @@ class Hero extends React.Component {
       </div>
     }
 
-    return <a className="book-container" href={`${this.state.baseUrl}${i18n.t('pricing.amazonId')}`}>
+    return <a className="book-container" href="#ebook">
       {this.renderCover()}
     </a>
   }
