@@ -3,8 +3,8 @@
 @import "tailwindcss/utilities";
 
 ::selection {
-  background: #7e3af2;
-  color: white;
+  background: #fce62e;
+  color: black;
 }
 
 .love {
@@ -120,4 +120,9 @@
   margin-top: 20px;
   padding-top: 5px;
   transform: rotate(45deg); /* Standard syntax */
+}
+
+.underline {
+  background: linear-gradient(to top, #fce62e 35%, transparent 35%);
+  text-decoration: none;
 }

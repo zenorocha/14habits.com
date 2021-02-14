@@ -5,7 +5,7 @@ class Toc extends React.Component {
   render() {
     i18n.locale = this.props.locale;
 
-    return <div className="bg-gray-900 relative overflow-hidden">
+    return <div className="bg-book-gray relative overflow-hidden">
       <div className="max-w-screen-xl mx-auto py-15 text-lg">
         <div className="hidden sm:block sm:absolute sm:inset-0">
           <svg className="absolute bottom-0 right-0 transform translate-x-1/2 mb-48 text-gray-700 lg:top-0 lg:mt-28 lg:mb-0 xl:transform-none xl:translate-x-0" width="364" height="384" viewBox="0 0 364 384" fill="none">
@@ -19,7 +19,7 @@ class Toc extends React.Component {
         </div>
         <div className="relative z-10">
           <h2 className="text-5xl mb-10 font-semibold text-gray-50 px-4">
-            {i18n.t('toc.titleFirstPart')} <span className="text-purple-400">{i18n.t('toc.titleSecondPart')}</span>
+            {i18n.t('toc.titleFirstPart')} <span className="text-book-yellow">{i18n.t('toc.titleSecondPart')}</span>
           </h2>
           <div className="flex-none sm:flex">
             <div className="text-base sm:flex-1 px-4">

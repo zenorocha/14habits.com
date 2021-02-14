@@ -6,14 +6,14 @@ class Pricing extends React.Component {
   constructor(props) {
     super(props);
 
-    const { price, cents, baseUrl } = getBookPrice();
-    this.state = { price, cents, baseUrl };
+    const { value, cents, baseUrl } = getBookPrice();
+    this.state = { value, cents, baseUrl };
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.geo !== prevProps.geo) {
-      const { price, cents, baseUrl } = getBookPrice();
-      this.setState({ price, cents, baseUrl });
+      const { value, cents, baseUrl } = getBookPrice();
+      this.setState({ value, cents, baseUrl });
     }
   }
 
@@ -21,7 +21,7 @@ class Pricing extends React.Component {
     i18n.locale = this.props.locale;
 
     return <div>
-      <div className="bg-gray-900">
+      <div className="bg-book-gray">
         <div className="pt-12 px-4 sm:px-6 lg:px-8 lg:pt-20">
           <div className="text-center">
             <p className="mt- text-3xl leading-9 font-extrabold text-white sm:text-4xl sm:leading-10 lg:text-5xl lg:leading-none">
@@ -35,15 +35,15 @@ class Pricing extends React.Component {
 
         <div className="mt-16 bg-white pb-12 lg:mt-20 lg:pb-20">
           <div className="relative z-0">
-            <div className="absolute inset-0 h-5/6 bg-gray-900 lg:h-2/3"></div>
+            <div className="absolute inset-0 h-5/6 bg-book-gray lg:h-2/3"></div>
             <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="relative lg:grid lg:grid-cols-9">
                 <div className="mt-10 max-w-lg mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-start-4 lg:col-end-7 lg:row-start-1 lg:row-end-4">
                   <div className="relative z-10 rounded-lg shadow-xl">
-                    <div className="pointer-events-none absolute inset-0 rounded-lg border-2 border-purple-600"></div>
+                    <div className="pointer-events-none absolute inset-0 rounded-lg border-2 border-book-yellow"></div>
                     <div className="absolute inset-x-0 top-0 transform translate-y-px">
                       <div className="flex justify-center transform -translate-y-1/2">
-                        <span className="inline-flex rounded-full bg-purple-600 px-4 py-1 text-sm leading-5 font-semibold tracking-wider uppercase text-white">
+                        <span className="inline-flex rounded-full text-book-gray bg-book-yellow px-4 py-1 text-sm leading-5 font-semibold tracking-wider uppercase text-white">
                           E-Book
                         </span>
                       </div>
@@ -52,7 +52,7 @@ class Pricing extends React.Component {
                       <div>
                         <div className="mt-4 flex items-center justify-center">
                           <div className="mt-4 flex items-baseline text-6xl leading-none font-extrabold">
-                            {this.state.price}
+                            {this.state.value}
                             {this.state.cents &&
                               <span className="text-2xl leading-8 font-medium text-gray-500">
                                 {this.state.cents}
@@ -106,10 +106,10 @@ class Pricing extends React.Component {
                         </li>
                       </ul>
                       <div className="mt-10">
-                        <a href={`${this.state.baseUrl}${i18n.t('pricing.book.amazonId')}`} className="block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-medium text-white bg-purple-600 hover:bg-purple-700 active:bg-purple-900 focus:outline-none focus:border-purple-700 focus:shadow-outline-purple transition ease-in-out duration-150">
+                        <a href={`${this.state.baseUrl}${i18n.t('pricing.book.amazonId')}`} className="block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-semibold text-book-gray bg-book-yellow hover:bg-yellow-200 focus:outline-none transition ease-in-out duration-150">
                           {i18n.t('pricing.book.primaryCta')}
                         </a>
-                        <a href={i18n.t('pricing.book.gumroadUrl')} className="mt-4 block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-medium text-purple-700 bg-purple-100 hover:text-purple-600 hover:bg-purple-200 focus:outline-none focus:shadow-outline-purple focus:border-purple-300 transition ease-in-out duration-150">
+                        <a href={i18n.t('pricing.book.gumroadUrl')} className="mt-4 block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-semibold text-book-yellow bg-book-gray hover:bg-gray-800 focus:outline-none transition ease-in-out duration-150">
                           {i18n.t('pricing.book.secondaryCta')}
                         </a>
                       </div>

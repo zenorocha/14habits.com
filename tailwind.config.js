@@ -4,9 +4,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'book-purple': '#48009c',
-        'book-light' : '#8e7ffb',
-        'book-accent': '#00ffff'
+        'book-yellow': '#fce62e',
+        'book-gray': '#1a1a1c',
       },
       fontFamily: {
         sans: ['Inter var', ...defaultTheme.fontFamily.sans],

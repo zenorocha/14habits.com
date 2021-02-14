@@ -8,7 +8,7 @@ class Audiobook extends React.Component {
     return <div className="bg-gray-50">
       <div className="max-w-screen-xl mx-auto py-16">
         <h2 className="text-5xl mb-4 font-semibold text-gray-900 px-4">
-          {i18n.t('audiobook.titleFirstPart')}&nbsp;<span className="text-purple-600">{i18n.t('audiobook.titleSecondPart')}</span>
+          {i18n.t('audiobook.titleFirstPart')}&nbsp;<span className="underline">{i18n.t('audiobook.titleSecondPart')}</span>
         </h2>
         <div className="flex-none sm:flex">
           <div className="text-lg text-gray-600 sm:flex-1 px-4">

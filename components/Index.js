@@ -45,7 +45,7 @@ class Index extends React.Component {
 
   render() {
     i18n.locale = this.props.locale;
-    const hasAudiobook = this.props.locale === 'en-US' || 'pt-BR';
+    const hasAudiobook = this.props.locale !== 'es-ES';
 
     return <div>
       {this.renderHead()}
