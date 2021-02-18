@@ -179,10 +179,10 @@ class PricingDouble extends React.Component {
                       </li>
                     </ul>
                     <div>
-                      <a href={i18n.t('pricing.audiobook.gumroadUrl')} className="block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-semibold text-book-gray bg-book-yellow hover:bg-yellow-200 focus:outline-none transition duration-300 ease-in-out">
+                      <a href={i18n.t('pricing.audiobook.primaryUrl')} className="block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-semibold text-book-gray bg-book-yellow hover:bg-yellow-200 focus:outline-none transition duration-300 ease-in-out">
                         {i18n.t('pricing.audiobook.primaryCta')}
                       </a>
-                      <a download href={i18n.t('audiobook.sample')} className="mt-4 block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-semibold text-book-yellow bg-book-gray hover:bg-gray-800 focus:outline-none transition duration-300 ease-in-out">
+                      <a href={i18n.t('pricing.audiobook.secondaryUrl')} className="mt-4 block w-full text-center rounded-lg border border-transparent px-6 py-4 text-xl leading-6 font-semibold text-book-yellow bg-book-gray hover:bg-gray-800 focus:outline-none transition duration-300 ease-in-out">
                         {i18n.t('pricing.audiobook.secondaryCta')}
                       </a>
                     </div>
@@ -190,7 +190,7 @@ class PricingDouble extends React.Component {
                 </div>
               </div>
             </div>
-            <p className="text-center text-base text-gray-700 mt-10">{i18n.t('pricing.moreThan')} <span className="font-semibold">2130 {i18n.t('pricing.copies')}</span> {i18n.t('pricing.sold')}</p>
+            <p className="text-center text-base text-gray-700 mt-10">{i18n.t('pricing.moreThan')} <span className="font-semibold">2,425 {i18n.t('pricing.copies')}</span> {i18n.t('pricing.sold')}</p>
           </div>
         </div>
       </div>
