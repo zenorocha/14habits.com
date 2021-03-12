@@ -6,15 +6,15 @@ class PricingDouble extends React.Component {
   constructor(props) {
     super(props);
 
-    const bookPrice = getBookPrice();
-    const audiobookPrice = getAudiobookPrice();
+    const bookPrice = getBookPrice(props.geo);
+    const audiobookPrice = getAudiobookPrice(props.geo);
     this.state = { audiobookPrice, bookPrice };
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.geo !== prevProps.geo) {
-      const bookPrice = getBookPrice();
-      const audiobookPrice = getAudiobookPrice();
+      const bookPrice = getBookPrice(this.props.geo);
+      const audiobookPrice = getAudiobookPrice(this.props.geo);
       this.setState({ audiobookPrice, bookPrice });
     }
   }

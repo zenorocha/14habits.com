@@ -6,13 +6,13 @@ class Pricing extends React.Component {
   constructor(props) {
     super(props);
 
-    const { value, cents, baseUrl } = getBookPrice();
+    const { value, cents, baseUrl } = getBookPrice(props.geo);
     this.state = { value, cents, baseUrl };
   }
 
   componentDidUpdate(prevProps) {
     if (this.props.geo !== prevProps.geo) {
-      const { value, cents, baseUrl } = getBookPrice();
+      const { value, cents, baseUrl } = getBookPrice(this.props.geo);
       this.setState({ value, cents, baseUrl });
     }
   }
