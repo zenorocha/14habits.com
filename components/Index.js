@@ -12,7 +12,7 @@ import Audiobook from './Audiobook';
 import FreeChapter from './FreeChapter';
 import Faq from './Faq';
 import Pricing from './Pricing';
-import PricingDouble from './PricingDouble';
+import PricingTrio from './PricingTrio';
 import Footer from './Footer';
 import Alert from './Alert';
 
@@ -61,7 +61,7 @@ class Index extends React.Component {
       <Toc locale={this.props.locale} />
       <Testimonials locale={this.props.locale} />
       {hasAudiobook
-        ? <PricingDouble locale={this.props.locale} geo={this.state.geo} />
+        ? <PricingTrio locale={this.props.locale} geo={this.state.geo} />
         : <Pricing locale={this.props.locale} geo={this.state.geo} />
       }
       <Faq locale={this.props.locale} />
