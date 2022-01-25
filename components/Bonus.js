@@ -4,6 +4,34 @@ import i18n from '../lib/i18n';
 import Alert from './Alert';
 
 class Bonus extends React.Component {
+  state = {
+    succeeded: undefined,
+    message: undefined,
+  };
+
+  async validateEmail(e) {
+    e.preventDefault();
+
+    const response = await fetch('/api/email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        emailAddress: e.target.email_address.value,
+        locale: this.props.locale,
+        habit: this.props.habit,
+      }),
+    });
+
+    const jsonResponse = await response.json();
+    
+    if (response.status === 200) {
+      this.setState({ succeeded: true, message: i18n.t('alert.success') });
+    } else {
+      const errorMessage = jsonResponse.error || i18n.t('alert.failed');
+      this.setState({ succeeded: false, message: errorMessage });
+    }
+  }
+
   renderHead() {
     const title = `${i18n.t('bonus.title')} / ${i18n.t('bonus.habit')} #${this.props.habit}`;
     const description = i18n.t(`bonus.${this.props.habit}`);
@@ -51,29 +79,26 @@ class Bonus extends React.Component {
             </p>
           </div>
           <div className="mt-12">
-            <form action={`https://app.convertkit.com/forms/${this.props.convertKit.form}/subscriptions`} data-sv-form={this.props.convertKit.form} data-uid={this.props.convertKit.uid} data-format="inline" data-version="5">
-              <ul data-element="errors"></ul>
-              <div data-element="fields">
-                <div className="sm:col-span-2">
-                  <label htmlFor="email" className="block text-sm font-medium leading-5 text-gray-700">Email</label>
-                  <div className="mt-1 relative rounded-md shadow-sm">
-                    <input type="email" id="email" name="email_address" placeholder={i18n.t('bonus.enterEmail')} required className="form-input py-3 px-4 block w-full transition ease-in-out duration-300" />
-                  </div>
+            <form onSubmit={this.validateEmail.bind(this)}>
+              <div className="sm:col-span-2">
+                <label htmlFor="email" className="block text-sm font-medium leading-5 text-gray-700">Email</label>
+                <div className="mt-1 relative rounded-md shadow-sm">
+                  <input defaultValue="123@abc.com" type="email" id="email" name="email_address" placeholder={i18n.t('bonus.enterEmail')} required className="form-input py-3 px-4 block w-full transition ease-in-out duration-300" />
                 </div>
-                <div className="sm:col-span-2">
-                  <span className="w-full inline-flex rounded-md shadow-sm">
-                    <button data-element="submit" className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 rounded-md font-semibold text-book-gray bg-book-yellow hover:bg-yellow-200 focus:outline-none transition duration-300 ease-in-out mt-5">
-                      {i18n.t('bonus.cta')}
-                    </button>
-                  </span>
-                </div>
+              </div>
+              <div className="sm:col-span-2">
+                <span className="w-full inline-flex rounded-md shadow-sm">
+                  <button type="submit" className="w-full inline-flex items-center justify-center px-6 py-3 border border-transparent text-base leading-6 rounded-md font-semibold text-book-gray bg-book-yellow hover:bg-yellow-200 focus:outline-none transition duration-300 ease-in-out mt-5">
+                    {i18n.t('bonus.cta')}
+                  </button>
+                </span>
               </div>
             </form>
           </div>
         </div>
       </div>
 
-      <Alert locale={this.props.locale} query={this.props.query} />
+      <Alert locale={this.props.locale} succeeded={this.state.succeeded} message={this.state.message} />
     </div>
   }
 }
