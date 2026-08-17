@@ -6,19 +6,11 @@ const mailgun = new Mailgun(formData);
 const mg = mailgun.client({
   username: 'api',
   key: process.env.MAILGUN_API_KEY,
-  public_key: process.env.MAILGUN_PUBLIC_KEY,
 });
 
 export default async (req, res) => {
   try {
     const { emailAddress, locale, habit } = req.body;
-    
-    /* Validate email address */
-    const validationRes = await mg.validate.get(emailAddress);
-
-    if (validationRes.result === 'undeliverable') {
-      throw 'Invalid email address';
-    }
 
     /* Add email to appropriate list */
     let listAddress = 'english@14habits.com';
