@@ -70,10 +70,8 @@ class Banner extends React.Component {
             </div>
             <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
               <div className="rounded-md shadow-sm">
-                <Link href={`/${this.state.path}`}>
-                  <a className="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-semibold rounded-md text-book-gray bg-book-yellow focus:outline-none focus:shadow-outline transition ease-in-out duration-300">
-                    {this.state.ctaText}
-                  </a>
+                <Link href={`/${this.state.path}`} className="flex items-center justify-center px-4 py-2 border border-transparent text-sm leading-5 font-semibold rounded-md text-book-gray bg-book-yellow focus:outline-none focus:shadow-outline transition ease-in-out duration-300">
+                  {this.state.ctaText}
                 </Link>
               </div>
             </div>
